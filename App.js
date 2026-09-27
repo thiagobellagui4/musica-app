@@ -262,6 +262,7 @@ export default function App() {
     }
   };
 
+  // Função auxiliar para formatar o tempo em mm:ss
   const formatTime = (millis) => {
     const totalSeconds = millis / 1000;
     const minutes = Math.floor(totalSeconds / 60);
@@ -450,6 +451,7 @@ export default function App() {
             <Text style={styles.expandedArtist}>{currentSong?.artist}</Text>
           </View>
 
+          {/* Barra de Progresso Real */}
           <View style={styles.progressContainer}>
             <View style={styles.progressBarBackground}>
               <View style={[styles.progressBarFill, { width: `${progressPercent}%` }]} />
