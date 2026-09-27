@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "Music app",
-    "slug": "musica-app",
+    "slug": "musica-app-novo",
     "version": "1.0.0",
     "owner": "thiagobelliagul4",
     "orientation": "portrait",
@@ -27,7 +27,7 @@
     },
     "extra": {
       "eas": {
-        "projectId": "f5188fd5-9959-4f6f-bfen-4dea7954cc91"
+        "projectId": "97861cac-d72b-4a46-b515-f45c37bdada0"
       }
     }
   }
