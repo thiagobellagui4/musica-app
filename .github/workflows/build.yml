@@ -17,8 +17,17 @@ jobs:
         with:
           node-version: 20
 
-      - name: Install Dependencies & Lockfile
-        run: npm install
+      - name: Install Dependencies & Generate Lockfile
+        run: |
+          if [ -f "package.json" ]; then
+            npm install
+          elif [ -d "musica-app" ]; then
+            cd musica-app
+            npm install
+          else
+            echo "package.json não encontrado!"
+            exit 1
+          fi
 
       - name: Install EAS CLI
         run: npm install -g eas-cli
