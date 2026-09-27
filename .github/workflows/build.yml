@@ -20,6 +20,11 @@ jobs:
       - name: Install EAS CLI
         run: npm install -g eas-cli
 
+      - name: Register/Link Project
+        run: eas project:init --non-interactive --force || true
+        env:
+          EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}
+
       - name: Build on EAS
         run: eas build --platform android --profile preview --non-interactive
         env:
