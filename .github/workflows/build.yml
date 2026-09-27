@@ -20,10 +20,10 @@ jobs:
       - name: Install Dependencies & Generate Lockfile
         run: |
           if [ -f "package.json" ]; then
-            npm install
+            npm install --legacy-peer-deps
           elif [ -d "musica-app" ]; then
             cd musica-app
-            npm install
+            npm install --legacy-peer-deps
           else
             echo "package.json não encontrado!"
             exit 1
