@@ -3,6 +3,7 @@
     "name": "Music app",
     "slug": "musica-app",
     "version": "1.0.0",
+    "owner": "thiagobelliagul4",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
@@ -23,6 +24,11 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "musica-app"
+      }
     }
   }
 }
