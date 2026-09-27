@@ -28,4 +28,3 @@ jobs:
         run: eas build --platform android --profile preview --non-interactive
         env:
           EAS_NO_VCS: 1
-          
