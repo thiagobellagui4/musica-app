@@ -17,13 +17,14 @@ jobs:
         with:
           node-version: 20
 
+      - name: Install Dependencies & Lockfile
+        run: npm install
+
       - name: Install EAS CLI
         run: npm install -g eas-cli
 
-      - name: Build on EAS with Direct Link
+      - name: Build on EAS
         run: |
-          eas build --platform android --profile preview --non-interactive --no-wait || true
-          # Se falhar por falta de link, tentamos inicializar e compilar de seguida
           eas project:init --force --non-interactive || true
           eas build --platform android --profile preview --non-interactive
         env:
